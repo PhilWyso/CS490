@@ -3,12 +3,13 @@ Naming Conventions for Functions
 ===============================
 Login Function
 --------------
+----[frontend sends]----------
 {
 header => login
 username
 password
 }
-[backend returns]
+-----[backend returns]--------
 {
  (fail, student, or teacher)
 }
@@ -16,9 +17,10 @@ password
 ===============================
 Question Bank Add
 -----------------
+----[frontend sends]----------
 {
   header(addQuestion)
-  name (operate)
+  qName (operate)
   question (create a program named operate that takes three parameters: op, a, b. The program will multiply, add, subtract, or divide the parameters a and b, and return the output)
   topic (if statements)
   difficulty (easy)
@@ -26,18 +28,20 @@ Question Bank Add
   input (+:1:2,-:3:2,* :4:6, /:4:2) (all a single string)
   output (3,1,24,2)
  }
- [backend returns]
+ -----[backend returns]--------
  {
   (success or fail)
  }
  ==============================
  Question Bank Request (returns list of questions)
+ ----[frontend sends]----------
  {
-  header(bankRequest)
+  header => bankRequest
  }
- [backend returns]
+ -----[backend returns]--------
  array{
   [0]{
+    id
     name
     question
     topic
@@ -53,6 +57,81 @@ Question Bank Add
   .
   . 
  }
+ ==============================
+ Create Exam(creates an exam)
+ ----[frontend sends]----------
+ {
+  header => createExam
+  examName (midterm)
+  number (4) (number of questions)
+  id {  (array of id numbers pertaining to the questions stored in the question bank)
+   [0] (1)
+   [1] . 
+   .
+   .
+   [(4)]
+   .
+   .
+  }
+ } 
+ ----[backend returns]----------
+ {
+  (success or fail)
+ }
+ ==============================
+ Take Exam
+ ----[frontend sends]----------
+ {
+  header => takeExam
+  username (student taking exam)
+  examName (name of exam)
+ }
+ ----[backend returns]----------
+ {
+ 
+ [0] {
+      id
+      qName
+      question
+      topic
+      difficulty
+      cases
+      input
+      output
+     }
+ [1] {..}
+ [2] {..}
+ .
+ .
+ }
+ ================================
+ Store taken Exam
+ ----[frontend sends]----------
+ {
+  header => storeExam
+  username
+  [0]{ 
+       qAnswer
+       grade
+     }
+  [1]{..}
+  [2]{..}
+  .
+  .
+ }
+  ----[backend returns]----------
+ {
+  (success or fail)
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
