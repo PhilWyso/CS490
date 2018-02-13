@@ -1,0 +1,43 @@
+Beta
+online exam system
+python
+only python language
+Front
+Teacher can Login
+	create question
+	create exam
+	release grades
+Student can login
+	take exam
+	veiw results
+Middle 
+Figure out how the fuck to grade the exam
+
+Back
+	create question bank
+		create php that adds to Q bank
+		create php thaat returns the entire question bank
+	Exam bank
+		create php that adds Exam to question bankk
+		create php that gives question from bank to front end
+		Save results of exam in databank (along with flag reelased = flase)
+		return exam to students if release flag = true
+
+4 use cases
+
+login for student(s) and one teacher
+1)Teacher can add questions to question bank
+2)Teacher can make exam via selecting questions from question bank
+3)Student can login and take exam
+4)Teacher can release scores /  student can see scores after release
+
+
+does your ajax request get sent as a Json array???
+
+username - user login  name
+pssword - users password
+topic - for loop while loop etc
+difficulty - easy medium hard
+question - content of question
+cases- sample inputs and outputs
+
