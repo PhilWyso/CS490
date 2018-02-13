@@ -19,7 +19,7 @@ Question Bank Add
 -----------------
 ----[frontend sends]----------
 {
-  header(addQuestion)
+  header => addQuestion
   qName (operate)
   question (create a program named operate that takes three parameters: op, a, b. The program will multiply, add, subtract, or divide the parameters a and b, and return the output)
   topic (if statements)
