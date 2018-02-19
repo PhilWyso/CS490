@@ -23,7 +23,7 @@
 
   }
   
-  $sql = "SELECT username, password FROM user WHERE username='$username' and password='$password'";
+  $sql = "SELECT username, password, type FROM user WHERE username='$username' and password='$password'";
   
   $result = $conn->query($sql);
 
