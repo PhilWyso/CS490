@@ -36,8 +36,9 @@
     //output data of each row
  
   } elseif ($result->num_rows > 0) {
-  	$output = $row['type'];
-    echo json_encode($output);
+  	while($row = $result->fetch_assoc()) { 
+      echo json_encode($row['type']);
+    }
   }
   
   $conn->close();
