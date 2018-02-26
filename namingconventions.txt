@@ -1,7 +1,16 @@
 
 Naming Conventions for Functions
+afsaccess1.njit.edu/~pw65/cs490/backend/(filename)
+login.php
+qbAdd.php
+qbRequest.php
+takeExam.php
+storeAnswers.php
+
+
+
 ============================================================================================================================
-Login Function
+Login Function login.php
 --------------
 ----[frontend sends]----------
 {
@@ -15,7 +24,7 @@ password
 }
 
 ============================================================================================================================
-Question Bank Add
+Question Bank Add qbAdd.php
 -----------------
 ----[frontend sends]----------
 {
@@ -33,7 +42,7 @@ Question Bank Add
   (success or fail)
  }
 ============================================================================================================================
- Question Bank Request (returns list of questions)
+ Question Bank Request (returns list of questions) qbRequest.php
  ----[frontend sends]----------
  {
   header => bankRequest
@@ -58,7 +67,7 @@ Question Bank Add
   . 
  }
 ============================================================================================================================
- Create Exam(creates an exam)
+ Create Exam(creates an exam) createExam.php
  ----[frontend sends]----------
  {
   header => createExam
@@ -79,7 +88,7 @@ Question Bank Add
   (success, or fail)
  }
  ============================================================================================================================
- Take Exam
+ Take Exam takeExam.php
  ----[frontend sends]----------
  {
   header => takeExam
@@ -105,7 +114,7 @@ Question Bank Add
  .
  }
 ============================================================================================================================
- Store taken Exam
+ Store taken Exam, storeAnswers.php
  ----[frontend sends]----------
  {
   header => storeExam
