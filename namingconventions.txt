@@ -114,6 +114,7 @@ Question Bank Add
        id
        qAnswer
        grade
+       notes
      }
   [1]{..}
   [2]{..}
