@@ -49,8 +49,7 @@ Question Bank Add qbAdd.php
  }
  -----[backend returns]--------
  array{
-  [0]{
-    id
+  [id#]{
     name
     question
     topic
@@ -58,10 +57,9 @@ Question Bank Add qbAdd.php
     cases
     input
     output
-  
   }
-  [1]{..}
-  [2]{..}
+  [id..]{..}
+  [id..]{..}
   .
   .
   . 
