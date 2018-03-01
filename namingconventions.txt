@@ -133,6 +133,23 @@ Question Bank Add qbAdd.php
  {
   (success or fail)
  }
+ ===========================================================================================================================
+ Return Exam List,
+ 
+ ----[frontend sends]----------
+ {
+  header => examListRequest
+ }
+ ----[backend returns]----------
+ {
+  [0]{
+      examName
+      status (released or assigned)
+  }
+  [1]{..}
+  [2]{..}
+  [...]
+ }
  
  
  
