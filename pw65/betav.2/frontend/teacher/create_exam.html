@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Question Bank - Professor</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body class="container" id="body_question">
+	<div id="header">
+		<span>
+			<h1 id="title">Create Exam</h1>
+			<div id="dropdown">
+				<ul>
+					<li>
+						<a id="userid">userID</a>
+						<ul class="dropdown">		
+							<li><a href="javascript:goTo('t-landing.html')">Home</a></li>					
+							<li><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+							<li><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+							<li><a href="javascript:logOut()">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+		</span>
+	</div>
+	<div id="body" style="margin-bottom: 50px;">
+		<div id="exams" class="exams-left" style="width: 55%;">
+			<div id="create-exam">
+				<div id="form_header" style="font-size: 130% ;margin-bottom: 10px;">Create New Exam
+				</div>
+				<!-- Small login form -->
+				<form name='form-create-exam' id="form_create_exam" onSubmit="submitExam(event)">
+					<div class="question-block">
+						<div class="left-block" style="width: 25%">
+							<label>Exam Name: </label>
+						</div>
+						<div class="right-block other" style="width: 75%">
+							<input class="clean" type="text" id="test_name" placeholder="Enter exam name..." required="Missing exam name">
+						</div>
+					</div>
+					
+					<div id="question-block">
+						<div class="question-block">
+							<div class="left-block" style="width: 100%; text-align:center !important; margin-bottom: 20px;">
+								<h2>Exam Questions</h2>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div>
+						<input class="clean" type="submit" value="Create">
+					</div>
+					<div id ="status">
+          				<h2></h2>
+        			</div>
+				</form>
+			</div>
+		</div>
+		<div class="exams-right" style="width: 2%">&nbsp;</div>
+		<div id="exams" class="exams-right" style="margin-bottom: 10px; width: 43%">
+			<div id="create-question" style="margin-top: 20px;">
+				<div id="form_header" style="font-size: 130% ;margin-bottom: 10px;"></div>
+				<h2>Question Bank</h2>
+				<form>
+					<table style="width:100%; margin-bottom: 10px;" id="question_table" >
+						<col width="3%">
+						<col width="5%">
+						<col width="6%">
+						<col width="6%">
+						<col width="70%">
+						<col width="10%">
+						<tr>
+							<th>ID</th>
+							<th>Question</th>
+							<th>Difficulty</th>
+							<th>Topic</th>
+							<th>Question Text</th>
+							<th>Add To Exam</th>
+						</tr>
+
+					</table>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="exam.js"></script>
+<script type="text/javascript" src="../main.js"></script>
+
+</html>
