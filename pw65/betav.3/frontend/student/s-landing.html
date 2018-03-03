@@ -1,0 +1,61 @@
+<!--
+Philip Wysocki
+student home page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student - Main</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+</head>
+
+<body id="body_question">
+	<div id="header">
+		<span>
+			<h1>Student Home</h1>
+			<!-- change this to be a side header in css, add logo or icon to spruce it up later -->
+			<div id="dropdown">
+				<ul>
+					<li>
+						<a id="userid">User ID</a>
+						<ul class="dropdown">		
+							<li><a href="javascript:logOut()">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</span>
+	</div>
+	<div id="body">
+		<div id="exams" style="width: 63%; margin-bottom: 70px;">
+			<div id="create-exam">
+				<div id="form_header" style="font-size: 130% ;margin-bottom: 10px;">Available Exams</div>
+				<table style="width:100%; margin-bottom: 10px; text-align: center; vertical-align: middle" id="exams_table" >
+					<col width="70%">
+					<col width="30%">
+					<tr>
+						<th>Test Name</th>
+						<th>Status</th>
+					</tr>
+
+				</table>
+				
+			</div>
+
+		</div>
+		<div class="exams-right" style="width: 2%">&nbsp;</div>
+		<div id="exams" class="exams-right" style="width: 35%;">
+			<div id="create-exam">
+				</div>
+			</div>
+		</div>
+		
+
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="student.js"></script>
+
+</html>

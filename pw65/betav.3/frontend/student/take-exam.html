@@ -1,0 +1,53 @@
+<!--
+Philip Wysocki
+Exam Page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Exam</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+</head>
+<div id="header">
+		<span>
+			<h1>Take Exam</h1>
+			<!-- change this to be a side header in css, add logo or icon to spruce it up later -->
+			<div id="dropdown">
+				<ul>
+					<li>
+						<a id="userid">User ID</a>
+					</li>
+				</ul>
+			</div>
+		</span>
+</div>
+<body class="container">
+	<div id="body">
+		<div id="questions">
+			<div id="create-question">
+				<div id="exam_name" style="font-size: 130% ;margin-bottom: 10px; text-align: center; font-weight: bold;">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div id="question_list">
+		</div>
+		<div id="questions">
+			<div id="create-question">
+				<form>
+					<div style="text-align: center;">
+						<input type="button" value="Submit" onClick="submitExam()">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id ="status">
+          <h2></h2>
+        </div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="takeExam.js"></script>
+</html>
