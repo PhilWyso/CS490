@@ -1,0 +1,26 @@
+<!--
+Philip Wysocki
+Login page load
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<!-- will create style sheet later  -->
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	
+</head>
+
+<body id="body">
+	<div id="login">
+		<form name = 'form-login' id="loginForm">
+			<input type="text" id="username" placeholder="Username" required="Missing username.">
+			<input type="password" id="password" placeholder="Password" required="Missing password.">
+			<!-- uses listener in JS to notice input -->
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="login.js"></script>
+</html>
