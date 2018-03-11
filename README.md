@@ -24,3 +24,5 @@ http://codingbat.com/prob/p173401
 |autoNotes| string containing the notes provided by the middleEnd when automatically graded| -1 point for wrong function name, -1 point for wrong parameter name, -1 for failing case 2, etc..|
 |teacherNotes| string containig the notes provided by the teacher when reviewing an exam | I added an extra point, since I taught this differently |
 |id| question id for a question which is automatically assigned by the backend when it is created| 2
+|status| status of an exam, the variable will contain either "assigned", "submitted", or "released"|
+
