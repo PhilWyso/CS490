@@ -83,6 +83,10 @@ mid end at this point will be grading the questions one by one and sending them 
 |autoNotes| Wrong function Name : -1, Wrong case 1 output: -1, Fails to Compile: -5|
 |grade|3|
 
+#### backend
+Backend will save all the information, as well as updating the studednt exam status to "submitted".
+the backend will either return a "success" or a "fail". I'm still thinking this one through. I'm thinking the frontend will make a counter, coutning the number of successes or fails and once the number of successes is equal to the number of questions force return to student home landing.
+
 
 
 
