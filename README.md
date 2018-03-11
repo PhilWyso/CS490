@@ -25,4 +25,5 @@ http://codingbat.com/prob/p173401
 |teacherNotes| string containig the notes provided by the teacher when reviewing an exam | I added an extra point, since I taught this differently |
 |id| question id for a question which is automatically assigned by the backend when it is created| 2
 |status| status of an exam, the variable will contain either "assigned", "submitted", or "released"|
+|pointWorth| the maximum amount of points a question is worth | 
 
