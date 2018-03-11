@@ -81,7 +81,7 @@ mid end at this point will be grading the questions one by one and sending them 
 |id  |1
 |answer | students answer|
 |autoNotes| Wrong function Name : -1, Wrong case 1 output: -1, Fails to Compile: -5|
-|grade|:3|
+|grade|3|
 
 
 
