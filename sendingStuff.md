@@ -1,4 +1,5 @@
 
+# WHAT EVERYONE WILL BE SENDING BETWEEN EACH OTHER
 ## IF YOU WANT TO SEE THE JSONS IN A CLEANER FORMAT USE http://jsonviewer.stack.hu, AND COPY AND PASTE THE JSON YOU WANT TO VIEW INTO THE BOX
 -----------------------------
 
@@ -15,7 +16,9 @@ Frontend will be sending, the username, password, and a header with "login" inse
 Backend will simply be returning json string that contains "fail", "teacher", or "student"
 
 -------
-
+## STUDENT SIDE FUNCTIONS
+----------
+---------
 ###  Student Exam List Call 
 ##### frontend
 Frontend will be attempting a request to the backend to recieve a list of exams assigned to the currently logged in student.
@@ -87,6 +90,7 @@ mid end at this point will be grading the questions one by one and sending them 
 Backend will save all the information, as well as updating the studednt exam status to "submitted".
 the backend will either return a "success" or a "fail". I'm still thinking this one through. I'm thinking the frontend will make a counter, coutning the number of successes or fails and once the number of successes is equal to the number of questions force return to student home landing.
 
+----------------------
 
 
 
