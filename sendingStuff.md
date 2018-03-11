@@ -1,5 +1,5 @@
 
-## IF YOU WANT TO SEE THE JSONS USE http://jsonviewer.stack.hu, AND COPY AND PASTE THE JSON YOU WANT TO VIEW INTO THE BOX
+## IF YOU WANT TO SEE THE JSONS IN A CLEANER FORMAT USE http://jsonviewer.stack.hu, AND COPY AND PASTE THE JSON YOU WANT TO VIEW INTO THE BOX
 -----------------------------
 
 ### LOGIN 
@@ -27,11 +27,29 @@ Frontend will be attempting a request to the backend to recieve a list of exams 
 #### backend
 Backend will be echo a json_encode(array), containing exam Names and the student's status with that array, such as "assigned",
 "submitted", or "released".
-so their json will look as so.
+so their json will look as so:
 
 {"0":{"examName":"TestNumber4","status":"released"},"1":{"examName":"TestNumber5","status":"released"},"2":{"examName":"CS490 Midterm Ok","status":"released"}}
 
 -------
+
+### Student taking Exam Call
+##### frontend
+Frontend will be attempting a request to the backend to recieve an exam for the currently logged in student to take
+
+|variable name| variable content|
+|---|---|
+|header  |takeExamRequest|
+|examName | MidTerm|
+#### backend
+Backend will be echo a json_encode(array), containing everything needed for the student to take the exam, and everything needed for the
+middle end to grade the exam
+so their json will look as so:
+
+{"1":{"id":"1","functionName":"sleepIn","question":"Create an algorithm with the name sleepIn that takes on two boolean paramaters, weekday and vacation, named and ordered accordingly. The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.","topic":"if statement","difficulty":"easy","parameters":"weekday, vacation","input":"false:false, true:false, false:true","output":"true, false, true"},"15":{"id":"15","functionName":"basicAdd","question":"Write a function named basicAdd, that adds together the paramters a and b together.","topic":"Conditionals","difficulty":"Easy","parameters":"a,b","input":"1,2:4,5:6,4","output":"3:9:10"}}
+
+
+
 
 
 
