@@ -26,4 +26,5 @@ http://codingbat.com/prob/p173401
 |id| question id for a question which is automatically assigned by the backend when it is created| 2
 |status| status of an exam, the variable will contain either "assigned", "submitted", or "released"|
 |pointWorth| the maximum amount of points a question is worth | 
-
+|questionList| list of ids assigned |
+|pointList| list of points corresponding to ids in questionList
