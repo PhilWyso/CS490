@@ -131,7 +131,7 @@ Frontend will be attempting a request to recieve a list of created exams
 
 |variable name| variable content|
 |---|---|
-|header  |teacherExamListRequest|
+|header  |teacherExamScoreRequest|
 |examName| TestNumber4 |
 
 #### backend
