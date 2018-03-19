@@ -1,0 +1,39 @@
+phpMyAdmin: https://web.njit.edu/mysql/phpMyAdmin
+server:	    sql1.njit.edu
+username:   ja398
+password:   flJOYDGVq
+database:   ja398
+
+TABLES:
+Users:
+	column 1: 		UserID 			primary key (auto-increments from 1)
+	column 2: 		Username 		unique username for both students and faculty
+	column 3: 		Password 		Hashed
+	column 4: 		UserStatus 		will return 'student' or 'faculty' if user is either, else 'SQL FAIL' if no user is found
+	column 5:		Score			total points from exam. 	
+
+QuestionBank:
+	column 1: 		QuestionID 		primary key (auto-increments from 1)
+	column 2: 		QType			Multiple-Choice (MC), True/False (TF), Open-ended (OE)
+	column 3: 		Difficulty		Easy, Medium, Hard. Difficulty to classify question, used for filtering
+	column 4: 		Title			name of the question used in the list. i.e. "For-loop Question #1"
+	column 5: 		Prompt 			question prompt used during exam, stored as text
+	column 6-9:		Choice1-4		Used for multiple choice questions or True/False. **Defaults to NULL if nothing is specified. OPTIONAL**
+									For MC questions, QType should be set to MC and 4 choices needs to be specified.
+									For TF questions, Choices 1-2 will be set to 'True' and 'False', respectively
+	column 10: 		Answer			Answer to question, stored as text
+
+
+ExamQuestions:
+	column 1: 		QuestionID 		primary key (auto-increments from 1)
+	column 2: 		QType			Multiple-Choice (MC), True/False (TF), Open-ended (OE)
+	column 3: 		Difficulty		Easy, Medium, Hard. Difficulty to classify question, used for filtering
+	column 4: 		Title			name of the question used in the list. i.e. "For-loop Question #1"
+	column 5: 		Prompt 			question prompt used during exam, stored as text
+	column 6-9:		Choice1-4		Used for multiple choice questions or True/False. **Defaults to NULL if nothing is specified. OPTIONAL**
+									For MC questions, QType should be set to MC and 4 choices needs to be specified.
+									For TF questions, Choices 1-2 will be set to 'True' and 'False', respectively
+	column 10: 		Answer			Answer to question, stored as text
+	column 11:		MaxPoints		Point Value for each question. Stored as an INT.
+	column 12:		$student		Column name is the student's username. Each entry will be the answer provided by the respective student for each question on the exam.
+							Comparing each answer against the actual answer on the test will give the points received.

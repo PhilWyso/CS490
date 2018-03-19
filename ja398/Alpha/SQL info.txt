@@ -1,0 +1,18 @@
+phpMyAdmin: https://web.njit.edu/mysql/phpMyAdmin
+server:	    sql1.njit.edu
+username:   ja398
+password:   flJOYDGVq
+database:   ja398
+table: 	    users
+
+table info:
+column 1: id (primary key) (auto-increments from 1)
+column 2: username (unique)
+column 3: password (hashes were saved into database, can be changed if need be)
+
+test 'usernames'/'passwords' (hash):
+Hashes generated using: http://www.passwordtool.hu/php5-password-hash-generator
+
+'root'/'toor' ($2y$10$w9Mzw9yudWRo1747Pe0fTeoBodivYSVSkILFBue6so0tbNwnBMdw6)
+'admin'/'admin' ($2y$10$w3k3C.LYExfKSO/otWkFxu0rv.niu6uLkqAAfxIOfyoXOyyC/iFLS)
+'user123'/'password123' ($2y$10$hacz0gExKas5mHHOK36X4.RsEvR4Orz0I4SFQKYiCYDyzLnr1.rM.)
