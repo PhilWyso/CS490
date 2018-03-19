@@ -25,7 +25,7 @@ Frontend will be attempting a request to the backend to recieve a list of exams 
 
 |variable name| variable content|
 |---|---|
-|header  |studentExamRequest|
+|header  |studentExamListRequest|
 |username | studentName|
 #### backend
 Backend will be echo a json_encode(array), containing exam Names and the student's status with that array, such as "assigned",
