@@ -13,7 +13,7 @@ function proc($link,$d)
         curl_close($send);
         return $RET;
 }
-        $src='https://web.njit.edu/~kxg2/CS490/kxg2/proc.php';
+        $src='https://web.njit.edu/~kxg2/CS490/kxg2/grading.php';
         
 	$fData=array(
         	'username'=>'username',
