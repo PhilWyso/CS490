@@ -1,0 +1,76 @@
+<!--
+Philip Wysocki
+student home page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student - Main</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="logo">
+				<a href=""><img src="../img/njit-logo-mod.png" alt="logo"> </a>
+
+			</div>
+			<div class="user-name">
+				<a id="userid">Teacher ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+						<li class="li-link"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-full">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Exams </span>
+					<span class="caption-explain"> List of Assigined Exams</span>
+				</div>
+			</div>
+			<div class="container-body">
+				<table>
+					<col width="70%">
+					<col width="30%">
+					<thead>
+					<tr>
+						<th>Test Name</th>
+						<th>Status</th>
+					</tr>
+					</thead>
+					<tbody id="exams_table">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="student.js"></script>
+
+</html>
+
+
+
+
+<table style="width:100%; margin-bottom: 10px; text-align: center; vertical-align: middle" id="exams_table" >
+					<col width="70%">
+					<col width="30%">
+					<tr>
+						<th>Test Name</th>
+						<th>Status</th>
+					</tr>
+
+				</table>

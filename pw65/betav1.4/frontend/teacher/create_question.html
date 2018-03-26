@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Question Bank - Professor</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="logo">
+				<a href=""><img src="../img/njit-logo-mod.png" alt="logo"> </a>
+
+			</div>
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+						<li class="li-link"><a href="javascript:goTo('t-landing.html')">Home</a></li>		
+						<li class="li-link"><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+						<li class="li-link"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-left-sm">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Question Information </span>
+					<span class="caption-explain"> Fill In </span>
+				</div>
+			</div>
+			<div class="container-body">
+				<form id="form_create_question" onSubmit="submitQuestion(event)">
+					<div class="question-block">
+						<div>
+							<label>Function Name: </label>
+						</div>
+						<div class="right-block other">
+							<input type="text" id="func_name" placeholder="Enter function name..." required="Missing function name">
+						</div>
+					</div>
+					<div class="question-block">
+						<div>
+							<label>Question: </label>
+						</div>
+						<div>
+							<textarea rows="4" cols="50" id="question_text" placeholder="Enter question..." required="Missing question"></textarea>
+						</div>
+					</div>
+					
+					<div>
+						<div>
+							<label>Topic: </label>
+						</div>
+						<div style="margin-bottom: 12px;">
+							<div style="width: 30%">
+								<select  class="styled-select blue semi-square" id="topic" >
+									<option value="Arrays">Arrays</option>
+									<option value="Conditionals">Conditionals</option>
+									<option value="Loops">Loops</option>
+									<option value="Recursion">Recursion</option>
+									<option value="Strings">Strings</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<label>Difficulty: </label>
+						</div>
+						<div style="margin-bottom: 20px;">
+							<div style="width: 30%">
+								<select id="difficulty">
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div>
+							<label>Function Params: </label>
+						</div>
+						<div>
+							<input type="text" id="param_names" placeholder="Enter function parameters..." required="Missing function name." style="width: 60%">
+						</div>
+					</div>
+					<div style="margin-bottom: 15px;" id="test_cases">
+						<div id="block_0">
+							<div id="left_block_0">
+								<label>Test Cases:</label>
+							</div>
+							<div id="right_block_0">
+								<div style="width: 40%">
+									<input type="text" id="input_0" placeholder="Input..." required="">
+								</div>
+								<div style="width: 5%">&nbsp;</div>
+								<div style="width: 40%;">
+									<input type="text" id="output_0" placeholder="Expected output..." required="">
+								</div>
+								<div style="width: 5%">&nbsp;</div>
+								<div style="width: 10%; float: right;" >
+									<input type="button" value="Add" style="width:100%" onClick="addTestCase()">
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+
+					<div >
+						<input type="submit" value="Create">
+					</div>
+				</form>
+				
+			</div>
+		</div>
+
+
+
+		<div class="container-right-lg">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Question Data Bank </span>
+					<span class="caption-explain"> List of created Questions</span>
+				</div>
+			</div>
+			<div class="container-body">
+				<form id=sort_form onSubmit="submitSort(event)">
+				<div class="table-options" id ="search_options">
+							<label>Sort by: </label>
+							<input type="text" id="search_by" placeholder="Search by Keyword">
+							<select id="sort-difficulty" onchange="submitSort()">
+									<option value="">Difficulty</option>
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+							</select>
+							<select id="sort-topic" onchange="submitSort()">
+									<option value="">Topic</option>
+									<option value="Arrays">Arrays</option>
+									<option value="Conditionals">Conditionals</option>
+									<option value="Loops">Loops</option>
+									<option value="Recursion">Recursion</option>
+									<option value="Strings">Strings</option>
+							</select>
+				</div>
+				</form>
+				<form>
+					<table>
+						<col width="3%">
+						<col width="5%">
+						<col width="6%">
+						<col width="6%">
+						<col width="70%">
+						<col width="10%">
+						<thead>
+						<tr>
+							<th>ID</th>
+							<th>Question</th>
+							<th>Difficulty</th>
+							<th>Topic</th>
+							<th>Question Text</th>
+							<th>Delete from Bank</th>
+						</tr>
+						</thead>
+						<tbody id="question_table">
+						</tbody>
+
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="question.js"></script>
+<script type="text/javascript" src="../main.js"></script>
+
+</html>

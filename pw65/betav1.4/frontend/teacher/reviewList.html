@@ -1,0 +1,73 @@
+<!--
+Philip Wysocki
+See list of students for exam page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Exam Overview</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+
+<body>
+	<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="logo">
+				<a href=""><img src="../img/njit-logo-mod.png" alt="logo"> </a>
+
+			</div>
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+						<li class="li-link"><a href="javascript:goTo('t-landing.html')">Home</a></li>		
+						<li class="li-link"><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+						<li class="li-link"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-full">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title" id="exam_name"></span>
+					<span class="caption-explain"> List of Students</span>
+				</div>
+			</div>
+			<div class="container-body">
+			<table>
+				<col width="25%">
+				<col width="25%">
+				<col width="25%">
+				<col width="25%">
+				<thead>
+					<tr>
+						<th>Student Name</th>
+						<th>Status</th>
+						<th>Score</th>
+						<th>Review Exam</th>
+					</tr>
+			    </thead>
+			    <tbody id="student_table">
+			    </tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+	<!--Main End-->
+	<div class="footer">
+	</div>
+	<!--Footer End-->
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="reviewList.js"></script>
+</html>
+
+
+
