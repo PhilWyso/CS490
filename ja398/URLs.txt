@@ -1,44 +1,20 @@
 Accessing backend URLs:
 
-NOTE: change the milestone after /CS490/__/[file name] to reflect the current milestone. These URLs will be kept as up-to-date as possible.
-milestones:
-   alpha
-    beta
-    rc
-    rv
-	
-	LOGIN:
-		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/login.php';
-	
-	QUESTION BANK REQUEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/qbRequest.php';
-		
-	ADD QUESTION:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/addQuestion.php';
-	
-	CREATE TEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/createExam.php';
-	
-	REQUEST EXAM LIST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/examList.php';
-	
-	REQUEST STUDENT EXAM LIST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/studentExamList.php';
-	
-	TAKE EXAM REQUEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/takeExam.php';
-		
-	STUDENT EXAM REQUEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/studentExamRequest.php';
-	
-    INSTRUCTOR REVIEW REQUEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/instructorReviewRequest.php';
-		
-	EXAM UPDATE REQUEST:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/examUpdateRequest.php';
-	
-	RELEASE THE SCORES:
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/releaseScoreRequest.php';
-		
-	REQUEST INSTRUCTOR EXAM LIST
-		$url = 'afsaccess2.njit.edu/~ja398/cs490/rc/instructorExamReviewList.php';
+Based on Headers:
+'afsaccess2.njit.edu/~ja398/CS490/rc/login.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/studentExamListRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/takeExamRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/storeExamRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/reviewExamRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/teacherExamListRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/teacherExamScoreRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/addQuestionRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/questionBankRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/createExam.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/examUpdateRequest.php'
+'afsaccess2.njit.edu/~ja398/CS490/rc/examReleaseRequest.php'
+
+Additional:
+'afsaccess2.njit.edu/~ja398/CS490/rc/searchQuestionBank.php'
+
+For Release Version, folder will be changed to /rv/
