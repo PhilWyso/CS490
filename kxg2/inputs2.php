@@ -17,18 +17,54 @@ function proc($link,$d)
 
 //front needs to format the student answers as such... don't need to worry about escape chars
 //php nowdoc
+/*
 	$doc=<<<'lol'
-def operation(add, a, b):
-  if add =='+':
+def operation(op, a, b):
+  if op =='+':
     return a+b
-  elif add=='-':
+  elif op=='-':
     return a-b
-  elif add =='*':
+  elif op =='*':
     return a*b
-  elif add =='/':
-    return a/b
+  elif op =='/':
+    return a/b;;
 lol;
+*/
 
+
+
+/*
+$doc=<<<'lol'
+def operation(a, b):
+  if a[0]==b[0]:
+    return True
+  else:
+    end1=len(a)-1
+    end2=len(b)-1
+    if a[end1]==b[end2]:
+        return True
+  return False
+lol;
+*/
+
+/*
+$doc=<<<'lol'
+def operation(a, b):
+  if int(a)+int(b)==10 or a==10 or b==10:
+    return True
+  return False
+lol;
+*/
+
+$doc="def operation(op, a, b):
+  if op =='+':
+    return a+b
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b";
 
         $fData=array(
                 'header'=>'storeExamRequest',
@@ -36,11 +72,20 @@ lol;
                 'id'=>1,
                 'examName'=>'MidTerm',
                 'functionName'=>'operation',
-                'topic'=>'conditionals',
                 'parameters'=>'op,a,b',
-                'topic'=>'Conditionals',
+                'topic'=>'Loops',
 		'answer'=>$doc,
                 'pointWorth'=>10,   
+
+
+//		'input'=>'9,10:9,9:9,1',		
+//		'output'=>'True,False,True'
+
+
+
+		//'input'=>'[1,2,3]?[7,3]:[1,2,3]?[7,3,2]:[1,2,3]?[1,3]',
+//		'output'=>'True,False,True'
+
                 'input'=>'+,1,2:-,5,2:*,4,5:/,10,2',
                 'output'=>'3,3,20,5'
 		);

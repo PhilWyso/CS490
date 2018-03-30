@@ -1,0 +1,8 @@
+0
+Traceback (most recent call last):
+  File "check.py", line 14, in <module>
+    compile(source,f,'exec')
+  File "exec.py", line 9
+     return a/b;;
+                ^
+ SyntaxError: invalid syntax

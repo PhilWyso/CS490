@@ -1,10 +1,10 @@
-def operation(add, a, b):
-  if add =='+':
+def operation(op, a, b):
+  if op =='+':
     return a+b
-  elif add=='-':
+  elif op=='-':
     return a-b
-  elif add =='*':
+  elif op =='*':
     return a*b
-  elif add =='/':
+  elif op =='/':
     return a/b
 print(operation('/',10,2))
