@@ -1,0 +1,132 @@
+<!--
+Philip Wysocki
+Create Question Page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Question Bank</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body class="container" id="body_question">
+	<div class="header">
+			<h1 id="title">Create Question</h1>
+			<div id="dropdown">
+				<ul>
+					<li>
+						<a id="userid">userID</a>
+						<ul class="dropdown">		
+							<li><a href="javascript:goTo('t-landing.html')">Home</a></li>					
+							<li><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+							<li><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+							<li><a href="javascript:logOut()">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<div class="main">
+		<div id="questions" class="" style="width: 55%; margin-bottom: 25px;">
+			<div id="create-question">
+				<h2 id="form_header" style="font-size: 130% ;margin-bottom: 10px;">Create New Question</h2>
+				<form name='form-create-question' id="form_create_question" onSubmit="submitQuestion(event)">
+					<div class="question-block">
+						<div class="left-block">
+							<label>Function Name: </label>
+						</div>
+						<div class="right-block other">
+							<input type="text" id="func_name" placeholder="Enter function name..." required="Missing function name">
+						</div>
+					</div>
+					<div class="question-block">
+						<div class="left-block">
+							<label>Question: </label>
+						</div>
+						<div class="right-block other">
+							<textarea rows="4" cols="50" id="question_text" placeholder="Enter question..." required="Missing question"></textarea>
+						</div>
+					</div>
+					
+					<div class="super-block">
+						<div class="left-block">
+							<label>Topic: </label>
+						</div>
+						<div class="right-block" id="right_block_0" style="margin-bottom: 12px;">
+							<div class="two-quarter" style="width: 30%">
+								<select  class="styled-select blue semi-square" id="topic" >
+									<option value="Arrays">Arrays</option>
+									<option value="Conditionals">Conditionals</option>
+									<option value="Loops">Loops</option>
+									<option value="Recursion">Recursion</option>
+									<option value="Strings">Strings</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="super-block">
+						<div class="left-block" >
+							<label>Difficulty: </label>
+						</div>
+						<div class="right-block" id="right_block_0" style="margin-bottom: 20px;">
+							<div class="two-quarter" style="width: 30%">
+								<select  class="styled-select blue semi-square" id="difficulty">
+									<option value="Easy">Easy</option>
+									<option value="Medium">Medium</option>
+									<option value="Hard">Hard</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="question-block">
+						<div class="left-block">
+							<label>Function Params: </label>
+						</div>
+						<div class="right-block other">
+							<input type="text" id="param_names" placeholder="Enter function parameters..." required="Missing function name." style="width: 60%">
+						</div>
+					</div>
+					<div class="question-block" style="margin-bottom: 15px;" id="test_cases">
+						<div class="super-block" id="block_0">
+							<div class="left-block" id="left_block_0">
+								<label>Test Cases:</label>
+							</div>
+							<div class="right-block" id="right_block_0">
+								<div class="two-quarter" style="width: 40%">
+									<input type="text" id="input_0" placeholder="Input..." required="">
+								</div>
+								<div class="quarter" style="width: 5%">&nbsp;</div>
+								<div class="two-quarter" style="width: 40%;">
+									<input type="text" id="output_0" placeholder="Expected output..." required="">
+								</div>
+								<div class="quarter" style="width: 5%">&nbsp;</div>
+								<div class="quarter" style="width: 10%; float: right;" >
+									<input type="button" value="Add" style="width:100%" onClick="addTestCase()">
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+
+					<div >
+						<input type="submit" value="Create">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id ="status">
+          <h2></h2>
+        </div>
+	</div>
+	<div class="footer">
+	</div>
+
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="question.js"></script>
+
+</html>
