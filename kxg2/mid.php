@@ -81,44 +81,47 @@ switch($array['header'])
 {
 	//------------------------------------------------------------------------
 	case 'login':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/login.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/login.php';
 		break;
 	//------------------------------------------------------------------------
 	case 'studentExamReqest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/qbRequest.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/studentExamListRequest.php';
 		break;
 	//------------------------------------------------------------------------	
 	case 'takeExamRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/addQuestion.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/takeExamRequest.php';
 		break;
 	//------------------------------------------------------------------------
+
+
 	case 'storeExamRequest':
 		$url = 'https://web.njit.edu/~kxg2/CS490/kxg2/grading.php';
 		break;
+
 	//------------------------------------------------------------------------
 	case 'reviewExamRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/examList.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/reviewExamRequest.php';
 		break;
 	//------------------------------------------------------------------------
 	case 'teacherExamListRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/studentExamList.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/teacherExamListRequest.php';
 		break;
 	//------------------------------------------------------------------------
 	case 'addQuestionRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/takeExam.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/addQuestionRequest.php';
 		break;
 	//------------------------------------------------------------------------
 	case 'questionBankRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/takeExam.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/questionBankRequest.php';
 		break;	
 	case 'createExam':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/takeExam.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/createExam.php';
 		break;
 	case 'examUpdateRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/takeExam.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/examUpdateRequest.php';
 		break;
 	case 'examReleaseRequest':
-		$url = 'afsaccess1.njit.edu/~pw65/cs490/backend/takeExam.php';
+		$url = 'afsaccess2.njit.edu/~ja398/CS490/rc/examReleaseRequest.php';
 		break;
 
 	default:
