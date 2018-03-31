@@ -1,0 +1,60 @@
+<!--
+Philip Wysocki
+Review Exam Page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Review Exam</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body class="container">
+	<div id="header">
+		<div><label id="label_points_`+id+`">Point Worth</label><input type="text" id="points_`+id+`"></input></div>
+		<span>
+			<h1 id="title">Review Exam</h1>
+			<div id="dropdown">
+				<ul>
+					<li>
+						<a id="userid">Professor ID</a>
+						<ul class="dropdown">		
+							<li><a href="javascript:goTo('t-landing.html')">Home</a></li>					
+							<li><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+							<li><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+							<li><a href="javascript:logOut()">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</span>
+	</div>
+	<div id="body">
+		<div>
+				<h1 id="exam_name"></h1>
+				<br>
+				<h2 id="student_name"><h2>
+		</div>
+		<div id="question_list"></div>
+		<br>
+				<br>
+		<div id="questions">
+			<div id="create-question">
+				<form>
+					<div style="text-align: center;">
+						<input type="button" value="Update" onClick="updateStudentExam()">
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id ="status">
+          <h2></h2>
+        </div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="reviewExam.js"></script>
+</html>

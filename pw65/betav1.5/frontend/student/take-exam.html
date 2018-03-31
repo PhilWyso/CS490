@@ -1,0 +1,57 @@
+<!--
+Philip Wysocki
+student home page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Student - Exam</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="logo">
+				<a href=""><img src="../img/njit-logo-mod.png" alt="logo"> </a>
+
+			</div>
+			<div class="user-name">
+				<a id="userid">Teacher ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+						<li class="li-link"><a href="javascript:goTo('s-landing.html')">Home</a></li>
+						<li class="li-link"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="question-list" class="main">
+		<div class="question-container" style="height: 60px;">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title" style="font-size: 48px" id="exam_name"> Exam </span>
+				</div>
+			</div>	
+		</div>	
+	</div>
+	<div class="footer">
+		<div>
+			<form>
+				<div style="text-align: center;">
+					<input type="button" value="Submit" onClick="submitExam()">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="takeExam.js"></script>
+</html>
+
+

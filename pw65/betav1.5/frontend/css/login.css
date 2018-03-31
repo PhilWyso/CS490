@@ -1,0 +1,49 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.grid {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 1fr 1fr 50px;
+	grid-template-areas: 
+	"main image"
+	"main image"
+	"footer image";
+}
+
+.main{
+	grid-area: main;
+	background-color: white;
+	margin: auto;
+	width:50%;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: lightblue;
+}
+
+.image{
+	grid-area: image;
+	background: url(../img/bg-1.jpg);
+}
+
+.logo{
+	
+}
+
+@media (max-width: 700px){
+	.grid {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto 50px;
+	grid-template-areas:
+	"image" 
+	"main"
+	"footer";
+}
