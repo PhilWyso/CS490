@@ -3,14 +3,9 @@
 //CS 490
 //Release Candidate
 
-$db_server 	 = "sql1.njit.edu";
-$db_username = "ja398";
-$db_password = "flJOYDGVq";
-$db_name 	 = "ja398";
-
-try { $db = new mysqli($db_server, $db_username, $db_password, $db_name); }
+try { $db = new mysqli("sql1.njit.edu", "ja398", "flJOYDGVq", "ja398"); }
 catch (Exception $e) {
-	$message = "Service Unavailable. Error: ". $e;
+	$message = "Service Unavailable. Error: " . $e;
 	echo json_encode($message);
 	exit;
 }
