@@ -1,0 +1,21 @@
+So the way the commmunication structure I had set up on my side was
+
+Frontend takes in Student Answer -> 
+Front End ajax to submitExamRequest.php -> 
+Mid End recieves and processes the exam at processExam.php and then proceeds to send output to backend ->
+Backend recieves it at storeExamRequest.php
+
+
+Every other FrontEnd File takes its outputs and sends them ->
+Midend recieves it at mid.php and processes the URL and sends it to corrsesponding backend->
+Backend Recieves any corresponding inputs
+
+Important thing to note is that processExam.php doesn't go through mid.php at all.
+So our structure essentially looks like this
+
+        Frontend          |         MidEnd                 |         BackEnd
+ ======================================================================================
+  submitExamRequest     ->|->       processExam.php      ->|->     storeExamRequest.php
+   ------------------------------------------------------------------------------------
+  Everything else       ->|->       mid.php               ->|->     whatever.php
+                 
