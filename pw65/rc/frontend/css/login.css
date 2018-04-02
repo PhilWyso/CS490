@@ -1,0 +1,153 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.grid {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 650px auto;
+	grid-template-rows: 1fr 1fr 50px;
+	grid-template-areas: 
+	"main image"
+	"main image"
+	"footer image";
+}
+
+.main{
+	grid-area: main;
+	background-color: white;
+	margin: auto;
+	width:50%;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: white;
+}
+
+.image{
+	grid-area: image;
+	background: url(../img/bg-1.jpg);
+}
+
+.container{
+	margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: block;
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px 55px 33px 55px;
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+   
+
+}
+.title-group{
+	padding: 30px ;
+	padding-bottom: 50px;
+}
+.form-title{
+	display: block;
+    font-family: Helvetica;
+    
+    font-size: 30px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 26px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.form-group{
+	position: relative;
+	width: 100%;
+	margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  	border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+    display: block;
+    font-family: Helvetica;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.input{
+	font-family: Helvetica;
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.2;
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px;
+    outline: none;
+    border: none;
+    margin: 0;
+
+}
+
+.login-btn{
+	font-family: Helvetica;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.2;
+    outline: none !important;
+    border: none;
+    background: linear-gradient(to bottom right, #3D94F6, #57D2FF);
+    -webkit-appearance: button;
+    overflow: visible;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+}
+.login-btn:hover{
+	background: linear-gradient(to bottom right, #3D94F6, #403A9C);
+
+}
+
+.form-group-btn{
+	 width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
+}
+
+.logo{ 
+	
+}
+
+@media (max-width: 700px){
+	.grid {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto 50px;
+	grid-template-areas:
+	"image" 
+	"main"
+	"footer";
+}

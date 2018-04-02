@@ -1,0 +1,80 @@
+<!--
+Philip Wysocki
+Teacher Home Page
+-->
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Professor - Main</title>
+	<link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+</head>
+
+<body>
+<div class="grid">
+	<div class="header">
+		<div class="navbar">
+			<div class="logo">
+				<a href=""><img src="../img/njit-logo-mod.png" alt="logo"> </a>
+
+			</div>
+			<div class="user-name">
+				<a id="userid">Professor ID</a>
+			</div>
+
+			<div class="menu">
+				<ul class="ul-bar">
+						<li class="li-link"><a href="javascript:goTo('t-landing.html')">Home</a></li>		
+						<li class="li-link"><a href="javascript:goTo('create_question.html')">Create Question</a></li>
+						<li class="li-link"><a href="javascript:goTo('create_exam.html')">Create Exam</a></li>
+						<li class="li-link"><a href="javascript:logOut()">Log out</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="container-full">
+			<div class="container-title">
+				<div class="caption">
+					<span class="caption-title"> Exams </span>
+					<span class="caption-explain"> List of created Exams</span>
+				</div>
+			</div>
+			<div class="container-body">
+				<table>
+					<col width="30%">
+					<col width="30%">
+					<col width="20%">
+					<col width="20%">
+					<thead>
+						<tr>
+							<th>Test Name</th>
+							<th>Status</th>
+							<th>Review</th>
+							<th>Release Score</th>
+						</tr>
+					</thead>
+					<tbody id="exam_table">
+
+					</tobdy>
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<!--Main End-->
+	<div class="footer">
+	</div>
+	<!--Footer End-->
+</div>
+
+
+</body>
+<script type="text/javascript" src="../main.js"></script>
+<script type="text/javascript" src="teacher.js"></script>
+
+</html>
+
+
