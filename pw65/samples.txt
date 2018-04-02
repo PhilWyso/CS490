@@ -17,3 +17,14 @@ def stringTimes(str, n):
   return result
   
  ------------------------------------
+ Operate
+ 
+ def operate(op, a, b):
+  if op =='+':
+    return a+b
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b
