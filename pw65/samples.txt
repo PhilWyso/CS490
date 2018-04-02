@@ -1,0 +1,19 @@
+
+SleepIn
+
+def sleepIn(weekday, vacation):
+  if not weekday or vacation:
+    return True
+  else:
+    return False
+-------------------------------------
+
+stringTimes
+
+def stringTimes(str, n):
+  result = ""
+  for i in range(n):  # range(n) is [0, 1, 2, .... n-1]
+    result = result + str
+  return result
+  
+ ------------------------------------
