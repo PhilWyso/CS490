@@ -1,5 +1,5 @@
 <?php
-//~kxg2/CS490/kxg2/inputs2.php
+//~kxg2/CS490/kxg2/processExam.php
 
 //simulated front
 function proc($link,$d)
@@ -13,7 +13,7 @@ function proc($link,$d)
         curl_close($send);
         return $RET;
 }
-        $src='https://web.njit.edu/~kxg2/CS490/kxg2/mid.php';
+        $src='https://web.njit.edu/~kxg2/CS490/kxg2/processExam.php';
 
 //front needs to format the student answers as such... don't need to worry about escape chars
 //php nowdoc
@@ -69,11 +69,11 @@ $doc="def operation(op, a, b):
         $fData=array(
                 'header'=>'storeExamRequest',
                 'username'=>'student1',
-                'id'=>1,
+                'id'=>7,
                 'examName'=>'MidTerm',
                 'functionName'=>'operation',
                 'parameters'=>'op,a,b',
-                'topic'=>'Loops',
+                'topic'=>'Conditionals',
 		'answer'=>$doc,
                 'pointWorth'=>10,   
 
@@ -86,8 +86,8 @@ $doc="def operation(op, a, b):
 		//'input'=>'[1,2,3]?[7,3]:[1,2,3]?[7,3,2]:[1,2,3]?[1,3]',
 //		'output'=>'True,False,True'
 
-                'input'=>'+,1,2:-,5,2:*,4,5:/,10,2',
-                'output'=>'3,3,20,5'
+                'input'=>'+,1,2:-,4,2:*,2,8:/,8,4',
+                'output'=>'3,2,16,2'
 		);
 //send
         echo proc($src,$fData);

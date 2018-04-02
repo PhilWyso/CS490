@@ -69,7 +69,9 @@ foreach ($_POST as $key => $value)
 			break;
 		case 'pointList'
 			$array['pointList']=$value;
-			break;*/		
+			break;
+
+*/		
 		default:
 			break;
 	}
@@ -94,9 +96,14 @@ switch($array['header'])
 	//------------------------------------------------------------------------
 
 
+
+
+
 	case 'storeExamRequest':
-		$url = 'https://web.njit.edu/~kxg2/CS490/kxg2/grading.php';
 		break;
+
+
+
 
 	//------------------------------------------------------------------------
 	case 'reviewExamRequest':

@@ -7,4 +7,4 @@ def operation(op, a, b):
     return a*b
   elif op =='/':
     return a/b
-print(operation('/',10,2))
+print(operation('/',8,4))
