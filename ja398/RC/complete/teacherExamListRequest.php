@@ -10,7 +10,7 @@ catch (Exception $e) {
 	exit;
 }
 $username = mysqli_real_escape_string($db, $_POST['username']);
-$query	  = "SELECT ExamName, ExamStatus FROM ExamList;";
+$query	  = "SELECT ExamName, ExamStatus FROM Exams;";
 $result	  = mysqli_query($db, $query);
 $data 	  = array();
 $i = -1;

@@ -18,9 +18,9 @@ while($row = mysqli_fetch_assoc($result)) {
     $row_array[$i]['topic'] 	   = $row['Topic'];
     $row_array[$i]['difficulty']   = $row['Difficulty'];
     $row_array[$i]['question'] 	   = $row['Question'];
-	$row_array[$i]['cases'] 	   = $row['Cases'];
-	$row_array[$i]['input'] 	   = $row['Input'];
-	$row_array[$i]['output'] 	   = $row['Output'];
+	  $row_array[$i]['parameters'] 	   = $row['Cases'];
+  	$row_array[$i]['input'] 	   = $row['Input'];
+  	$row_array[$i]['output'] 	   = $row['Output'];
 }
 echo json_encode($row_array);
 //mysqli_free_result($result);
