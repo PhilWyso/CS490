@@ -1,0 +1,65 @@
+def operatn(op, a, b):  WRONG FUNCTION NAME
+  if op =='+':
+    return a+b
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b
+-------------
+;Correct Input: '+',1,2 resulted in 3 which is equal to case number: 
+0;Correct Input: '-',4,2 resulted in 2 which is equal to case number: 
+1;Correct Input: '*',2,8 resulted in 16 which is equal to case number: 
+2;Correct Input: '/',8,4 resulted in 2 which is equal to case number: 
+3You made a mistake in the function header should have function 
+name 'operation', you provided: 'operatn' instead. Deduction: -1 ; ; Final grade is: 29
+====================================================
+def operation(op, a, b):  COMPLETE CORRECT
+  if op =='+':
+    return a+b
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b
+-------------
+;Correct Input: '+',1,2 resulted in 3 which is equal to case number: 
+0;Correct Input: '-',4,2 resulted in 2 which is equal to case number: 
+1;Correct Input: '*',2,8 resulted in 16 which is equal to case number: 
+2;Correct Input: '/',8,4 resulted in 2 which is equal to case number: 
+3 ; Final grade is: 30
+====================================================
+def operation(op, a, b): FIRST CASE FAILS
+  if op =='+':
+    return 
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b
+-------------
+Incorrect;;Correct Input: '-',4,2 resulted in 2 which is equal to case number: 
+1;Correct Input: '*',2,8 resulted in 16 which is equal to case number: 
+2;Correct Input: '/',8,4 resulted in 2 which is equal to case number: 
+3You have failed the 0 'th case. Your answer provided ' None ' 
+instead of 3. Deduction: -7.5; ; Final grade is: 22.5
+====================================================
+def operatin(op, a, b): BOTH WRONG FUNCTION NAME AND FIRST CASE FAILS
+  if op =='+':
+    return 
+  elif op=='-':
+    return a-b
+  elif op =='*':
+    return a*b
+  elif op =='/':
+    return a/b
+ -------------
+ Incorrect;;Correct Input: '-',4,2 resulted in 2 which is equal to case number: 
+1;Correct Input: '*',2,8 resulted in 16 which is equal to case number: 
+2;Correct Input: '/',8,4 resulted in 2 which is equal to case number: 
+3You made a mistake in the function header should have function 
+name 'operation', you provided: 'operatin' instead. Deduction: -1 ;You have failed the 0 'th case. Your answer provided ' None ' 
+instead of 3. Deduction: -7.5; ; Final grade is: 21.5
