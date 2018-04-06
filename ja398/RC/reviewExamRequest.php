@@ -17,9 +17,10 @@ if (isset($_POST['examName'], $_POST['username'])) {
 	$row        = mysqli_fetch_row($result);
 	$id_array   = explode(",", $row[0]);
 	$pt_array   = explode(",", $row[1]);
-	$j          = 0;
 
-	foreach ($id_array as $id) {
+	for ($i=0; $i <= count($id_array) - 1; $i++) {
+		$id		  = $id_array[$i];
+		$pt		  = $pt_array[$i];
 		$id_query = "SELECT * FROM QuestionBank 
                         INNER JOIN StudentAnswers ON QuestionBank.ID = StudentAnswers.ID
                      WHERE StudentAnswers.Username = '$username' 
@@ -36,13 +37,12 @@ if (isset($_POST['examName'], $_POST['username'])) {
 			$row_array[$id]['cases'] 	    = $row['Cases'];
 			$row_array[$id]['input'] 	    = $row['Input'];
 			$row_array[$id]['output'] 	    = $row['Output'];
-            $row_array[$id]['pointWorth']	= $pt_array[$j];
+            $row_array[$id]['pointWorth']	= $pt;
             $row_array[$id]['teacherNotes'] = $row['TeacherNotes'];
             $row_array[$id]['autoNotes']    = $row['AutoNotes'];
             $row_array[$id]['grade']        = $row['Grade'];
             $row_array[$id]['answer']       = $row['Answer'];
-			$j++;
-        }
+		}
     }
     echo json_encode($row_array);
 }
