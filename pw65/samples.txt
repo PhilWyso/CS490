@@ -48,3 +48,5 @@ def front_times(str, n):
     return 21 - n
   else:
     return (n - 21) * 2
+    
+{"username":"js123","examName":"diff21test","id":"15","functionName":"diff21","topic":"Arrays","parameters":"n","input":"19:10:21:22","output":"2,11,0,2","answer":"\"asfd\"","maxGrade":"10"}
