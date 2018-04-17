@@ -1,0 +1,71 @@
+This text file details the final changes we need to get the midend properly running and functional.
+
+
+
+-------------------------------------------------------------------------------------------------
+STUDENT EXAM SUBMISSION
+
+So when the student is submitting their exam, frontend is still sending the question arrays one by one, the only difference
+is that there is now a new header variable added to it.
+
+new frontend array contains
+
+header: submitExamRequest
+examName: (contains name of exam)
+username: (contains name of user taking exam)
+id:     (contains id of question being sent)
+answer: (contains students answer for question being sent)
+
+This is array is sent to mid (mid.php), which then sends it to the backend( .... )
+backend stores the answers, and returns a "success"
+-------------------------------------------------------------------------------------------------
+
+TEACHER REVIEW SUBMISSION
+
+When a teacher is requestion an exam, the frontend will send a request to processExam.php in the mid end, which then sends a request
+to the backend to return a nested array of a students answers and other information. Midend processes it and returns it back.
+
+FrontEnd sends:
+
+examName
+username
+
+Midend Recieves and sends to backend. Backend Returns:
+sample nested array: (copy and paste it into jsonviewer to view properly)
+{"flag":"true","1":{"id":"1","functionName":"sleepIn","question":"Create an algorithm with the name sleepIn that takes on two boolean paramaters, weekday and vacation, named and ordered accordingly. The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.","topic":"if statement","difficulty":"easy","parameters":"weekday, vacation","input":"false:false, true:false, false:true","output":"true, false, true","pointWorth":"10","teacherNotes":"I went over this in class, and I mentioned this on the exam, you should not have gotton this wrong.","autoNotes":"","grade":"0","answer":"this is the students answer"},"3":{"id":"3","functionName":"sleepIn","question":"Create an algorithm with the name sleepIn that takes on two boolean paramaters, weekday and vacation, named and ordered accordingly. The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.","topic":"if statement","difficulty":"easy","parameters":"weekday, vacation","input":"false:false, true:false, false:true","output":"true, false, true","pointWorth":"10","teacherNotes":"I went over this in class, and I mentioned this on the exam, you should not have gotton this wrong.","autoNotes":"","grade":"0","answer":"this is the students answer"}}
+
+
+****IMPORTANT NOTE: I don't think the backend should use json_encode when echoing the array. I think the midend should do that, for then
+can just recieve the information and then just add autoNotes directly to the array and then json_encode it to the frontend.
+
+Midend Processes:
+midend checks the flag variable, 
+if it is false, it will grade and set the grade variable and autoNotes variable in each nested array.
+if is true, then do nothing with the input.
+Midend will need to echo json_encode($array), back to the frontend where the frontend will process it and show it.
+----------------------------------------------------------------------------------------------------------------
+EXAM UPDATE REQUEST
+
+When the teacher submits an update to the exam after reviewing it the frontend will send the following for each question:
+
+header: examUpdateRequest
+examName
+username
+id
+grade
+teacherNotes
+autoNotes
+
+mid.php will be recieving this. I think mid.php needs to add the autoNotes variable cuz I don't think it is on there
+backend.php will recieve it, and set the flag variable to true for studentExamStatus table. Returns Success on submission
+
+
+
+
+
+
+
+
+
+
+
