@@ -2,10 +2,10 @@
 SleepIn
 
 def sleepIn(weekday, vacation):
-  if not weekday or vacation:
-    return True
-  else:
-    return False
+    if not weekday or vacation:
+        return True
+    else:
+        return False
 -------------------------------------
 
 stringTimes
@@ -17,17 +17,17 @@ def stringTimes(str, n):
   return result
   
  ------------------------------------
- Operate
- 
- def operate(op, a, b):
-  if op =='+':
-    return a+b
-  elif op=='-':
-    return a-b
-  elif op =='*':
-    return a*b
-  elif op =='/':
-    return a/b
+Operate
+
+def operate(op, a, b):
+    if op =='+':
+        return a+b
+    elif op=='-':
+        return a-b
+    elif op =='*':
+        return a*b
+    elif op =='/':
+        return a/b
 -----------------------------------------
 frontTimes
 
